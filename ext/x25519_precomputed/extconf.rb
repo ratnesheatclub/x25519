@@ -5,7 +5,7 @@
 require "mkmf"
 
 if RUBY_PLATFORM.match?(/x86_64|x64/)
-  $CFLAGS << " -Wall -O3 -pedantic -std=c99 -mbmi -mbmi2 -march=haswell"
+  $CFLAGS << " -Wall -O3 -pedantic -std=c99 -mbmi -mbmi2 -mcpu=apple-m1"
 
   create_makefile "x25519_precomputed"
 else
